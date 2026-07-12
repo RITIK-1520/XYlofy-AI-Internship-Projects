@@ -30,7 +30,7 @@ st.caption(
 def load_data():
 
     sales = pd.read_csv(
-        "superstore_sales.csv"
+        "train.csv"
     )
 
     sales["Order Date"] = pd.to_datetime(
