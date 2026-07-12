@@ -168,7 +168,7 @@ elif page == "📈 Forecast Explorer":
     st.write("Forecast future sales using the best performing model.")
 
     comparison = pd.read_csv("week-3/comparison_table.csv")
-    forecast = pd.read_csv("week/3segment_forecast.csv", index_col=0)
+    forecast = pd.read_csv("week-3/segment_forecast.csv", index_col=0)
 
     col1, col2 = st.columns(2)
 
