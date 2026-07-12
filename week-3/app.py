@@ -314,7 +314,7 @@ elif page=="🚨 Anomaly Report":
     st.header("🚨 Sales Anomaly Report")
     st.write("Analyze unusual weekly sales detected using Isolation Forest.")
 
-    anomaly = pd.read_csv("anomaly_points.csv")
+    anomaly = pd.read_csv("week-3/anomaly_points.csv")
     anomaly["Order Date"] = pd.to_datetime(anomaly["Order Date"])
 
     weekly = sales.groupby(pd.Grouper(key="Order Date", freq="W"))["Sales"].sum().reset_index()
@@ -389,7 +389,7 @@ elif page=="📦 Demand Segments":
     st.header("📦 Product Demand Segmentation")
     st.write("Analyze product demand clusters generated using K-Means clustering.")
 
-    segment=pd.read_csv("segment_data.csv")
+    segment=pd.read_csv("week-3/segment_data.csv")
 
     c1,c2,c3,c4=st.columns(4)
     c1.metric("Clusters",segment["Cluster"].nunique())
