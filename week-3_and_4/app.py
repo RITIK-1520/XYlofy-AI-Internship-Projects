@@ -33,10 +33,8 @@ import pandas as pd
 
 @st.cache_data
 def load_data():
-    base_path = Path(__file__).parent
-    csv_path = base_path / "train.csv"
 
-    sales = pd.read_csv(csv_path)
+    sales = pd.read_csv("week-3_and_4/train.csv")
 
     sales["Order Date"] = pd.to_datetime(
         sales["Order Date"],
