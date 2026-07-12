@@ -28,10 +28,10 @@ st.caption(
 
 @st.cache_data
 def load_data():
+    base_path = Path(__file__).parent
+    csv_path = base_path / "train.csv"
 
-    sales = pd.read_csv(
-        "train.csv"
-    )
+    sales = pd.read_csv(csv_path)
 
     sales["Order Date"] = pd.to_datetime(
         sales["Order Date"],
@@ -39,7 +39,6 @@ def load_data():
     )
 
     sales["Year"] = sales["Order Date"].dt.year
-
     sales["Month"] = sales["Order Date"].dt.month_name()
 
     return sales
