@@ -338,6 +338,7 @@ elif page=="🚨 Anomaly Report":
         anomaly[["Order Date","Sales"]]
         .style.format({"Sales":"{:,.2f}"})
         .highlight_max(subset=["Sales"], color="#ff6961"),
+        width = "stretch"
     )
 
     highest = anomaly.loc[anomaly["Sales"].idxmax()]
