@@ -62,7 +62,6 @@ page = st.sidebar.radio(
     label_visibility="collapsed"
 )
    # Page 1
-)
 if page=="🏠 Home":
     st.header("📊 Sales Overview Dashboard")
 
