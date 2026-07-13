@@ -50,15 +50,17 @@ with st.spinner("Loading Dashboard..."):
     sales = load_data()
 
 st.sidebar.title("Welcome to the Dashboard")
-
 page = st.sidebar.radio(
-    "",
-[ "🏠 Home",
-  "📈 Forecast Explorer",
-    "🚨 Anomaly Report",
-    "📦 Demand Segments",
-    "ℹ️ About" ]
-
+    "Navigation",
+    [
+        "🏠 Home",
+        "📈 Forecast Explorer",
+        "🚨 Anomaly Report",
+        "📦 Demand Segments",
+        "ℹ️ About"
+    ],
+    label_visibility="collapsed"
+)
    # Page 1
 )
 if page=="🏠 Home":
