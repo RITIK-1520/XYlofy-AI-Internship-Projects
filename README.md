@@ -1,91 +1,97 @@
 # 🚀 XYlofy AI Internship Projects
 
-> **Data Science & Machine Learning Internship Portfolio**  
-> A collection of projects completed during my internship at **XYlofy AI**.
+This repository contains all projects completed during my **Data Science & Machine Learning Internship at XYlofy AI**.
+
+Each project demonstrates the complete machine learning workflow including data preprocessing, exploratory data analysis (EDA), feature engineering, model development, evaluation, visualization, deployment, and business reporting.
 
 ---
 
-# 📂 PROJECTS
+## 📂 Projects
 
----
+### 📌 Week 1 — House Price Prediction
+Predict housing prices using regression models with complete data preprocessing, feature engineering and performance evaluation.
 
-# 🏠 WEEK 1 — HOUSE PRICE PREDICTION
-
-## 📌 Project Overview
-
-Developed a machine learning solution to predict house prices using different property features.
-
-## ✨ Key Highlights
-
+**Highlights**
 - Data Cleaning & Preprocessing
 - Exploratory Data Analysis (EDA)
 - Feature Engineering
-- Model Building & Comparison
+- Linear Regression
+- Decision Tree Regressor
+- Random Forest Regressor
+- Model Comparison
+- Performance Metrics
+- Business Insights
+
+---
+
+### 📌 Week 2 — Employee Attrition Prediction
+Built a machine learning system to predict employee attrition and identify the major factors influencing employee turnover.
+
+**Highlights**
+- Data Cleaning
+- Feature Encoding
+- Exploratory Data Analysis
+- Logistic Regression
+- Random Forest
+- XGBoost
+- ROC-AUC Evaluation
+- Feature Importance
+- HR Business Insights
+
+---
+
+### 📌 Week 3 & 4 — Sales Forecasting & Demand Intelligence System
+Developed an end-to-end retail analytics dashboard combining forecasting, anomaly detection and demand segmentation.
+
+**Highlights**
+- Time Series Forecasting
+- SARIMA
+- Prophet
+- XGBoost Forecasting
+- Model Comparison
+- Anomaly Detection
+- Customer Demand Segmentation
+- Executive Business Report
+- Interactive Streamlit Dashboard
+
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Plotly
+- Scikit-learn
+- XGBoost
+- Prophet
+- Streamlit
+- Git & GitHub
+
+---
+
+## 🎯 Learning Outcomes
+
+- Machine Learning Workflow
+- Time Series Forecasting
+- Regression & Classification
+- Business Intelligence
+- Dashboard Development
 - Model Evaluation
-- Feature Importance Analysis
-- Business Summary
-
-📁 **Folder:** `Week-1-House-Price-Prediction`
-
----
-
-# 👨‍💼 WEEK 2 — EMPLOYEE ATTRITION PREDICTION
-
-## 📌 Project Overview
-
-Developed an Employee Attrition Prediction system to identify the major factors responsible for employee turnover and provide practical HR recommendations for improving employee retention.
-
-## ✨ Key Highlights
-
-- Data Loading & Exploration
-- Data Cleaning & Preprocessing
-- Exploratory Data Analysis (EDA)
-- Machine Learning Model Development
-- Model Performance Evaluation
 - Data Visualization
-- HR Insights & Business Recommendations
-- Executive Summary
-
-📁 **Folder:** `Week-2-Employee-Attrition`
+- Executive Reporting
+- Deployment using Streamlit
 
 ---
 
-# 🛠️ TECHNOLOGIES USED
-
-- 🐍 Python
-- 🐼 Pandas
-- 🔢 NumPy
-- 📊 Matplotlib
-- 📈 Seaborn
-- 🤖 Scikit-learn
-- 📓 Jupyter Notebook
-
----
-
-# 🎯 SKILLS GAINED
-
-- ✔ Data Cleaning & Preprocessing
-- ✔ Exploratory Data Analysis (EDA)
-- ✔ Feature Engineering
-- ✔ Machine Learning
-- ✔ Model Evaluation
-- ✔ Data Visualization
-- ✔ Business Problem Solving
-- ✔ HR Analytics
-
----
-
-# 👨‍💻 ABOUT ME
+## 👨‍💻 Author
 
 **Ritik Vasanta**
 
-B.Tech in Computer Science & Engineering  
-Indian Institute of Information Technology (IIIT) Kottayam
+B.Tech CSE (AI & Data Science Enthusiast)
 
-🔗 **GitHub:** https://github.com/RITIK-1520
+IIIT Kottayam
 
 ---
-
-# ⭐ THANK YOU FOR VISITING!
-
-If you found these projects interesting, feel free to explore the repository and share your feedback.
+⭐ If you found these projects useful, consider giving this repository a star.
