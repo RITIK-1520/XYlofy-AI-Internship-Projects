@@ -26,21 +26,23 @@ st.caption(
 )
 @st.cache_data
 def load_data():
-
-    sales = pd.read_csv("week-3_and_4/train.csv")
-
+    sales = pd.read_csv("week-3_and_4/train.csv")  
     sales["Order Date"] = pd.to_datetime(
         sales["Order Date"],
         dayfirst=True
     )
-
     sales["Year"] = sales["Order Date"].dt.year
     sales["Month"] = sales["Order Date"].dt.month_name()
-
     return sales
     
 with st.spinner("Loading Dashboard..."):
     sales = load_data()
+    
+    try:
+    sales = load_data()
+except Exception as e:
+    st.error(f"Error loading data: {e}")
+    st.stop()
 
 st.sidebar.title("Welcome to the Dashboard")
 page = st.sidebar.radio(
