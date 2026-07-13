@@ -24,12 +24,6 @@ st.title(
 st.caption(
     "Retail Sales Forecasting | Anomaly Detection | Product Demand Segmentation"
 )
-
-
-from pathlib import Path
-import streamlit as st
-import pandas as pd
-
 @st.cache_data
 def load_data():
 
@@ -44,8 +38,7 @@ def load_data():
     sales["Month"] = sales["Order Date"].dt.month_name()
 
     return sales
-
-sales = load_data()
+    
 with st.spinner("Loading Dashboard..."):
     sales = load_data()
 
@@ -115,7 +108,7 @@ if page=="🏠 Home":
         template="plotly_dark",font=dict(size=16),
         margin=dict(l=20,  r=20,t=50, b=20))
 
-    st.plotly_chart(fig,use_container_width=True)
+    st.plotly_chart(fig,width="stretch")
 
 
     monthly_sales = sales.groupby(pd.Grouper( key="Order Date", freq="ME"))["Sales"].sum().reset_index()
@@ -124,7 +117,7 @@ if page=="🏠 Home":
 
     fig.update_layout( title_x=0.25)
 
-    st.plotly_chart( fig, use_container_width=True)
+    st.plotly_chart( fig, width="stretch")
 
     left, right = st.columns(2)
 
@@ -145,7 +138,7 @@ if page=="🏠 Home":
 
     st.subheader("Filtered Sales Data")
 
-    st.dataframe(filtered_sales,use_container_width=True)
+    st.dataframe(filtered_sales,width="stretch")
     top_category = (
         sales.groupby("Category")["Sales"]
         .sum()
@@ -224,7 +217,7 @@ elif page == "📈 Forecast Explorer":
         title_x=0.35
     )
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     #  Forecast Table 
 
@@ -232,7 +225,7 @@ elif page == "📈 Forecast Explorer":
 
     st.dataframe(
         forecast_data.style.format({"Forecast":"{:,.2f}"}),
-        use_container_width=True
+        width="stretch"
     )
 
     # Forecast Summary
@@ -284,7 +277,7 @@ elif page == "📈 Forecast Explorer":
 
     st.dataframe(
         comparison.sort_values("MAPE").head(1).round(2),
-        use_container_width=True
+        width="stretch"
     )
 
     # Business Insight
@@ -339,7 +332,7 @@ elif page=="🚨 Anomaly Report":
     )
 
     fig.update_layout(template="plotly_dark", height=500, title_x=0.25)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     st.subheader("Detected Anomalies")
 
@@ -347,7 +340,7 @@ elif page=="🚨 Anomaly Report":
         anomaly[["Order Date","Sales"]]
         .style.format({"Sales":"{:,.2f}"})
         .highlight_max(subset=["Sales"], color="#ff6961"),
-        use_container_width=True
+       width="stretch"
     )
 
     highest = anomaly.loc[anomaly["Sales"].idxmax()]
@@ -414,7 +407,7 @@ elif page=="📦 Demand Segments":
     )
 
     fig.update_layout(template="plotly_dark",height=550,title_x=0.30)
-    st.plotly_chart(fig,use_container_width=True)
+    st.plotly_chart(fig,width="stretch"
 
     cluster_count=segment["Cluster_Name"].value_counts().reset_index()
     cluster_count.columns=["Cluster","Products"]
@@ -438,7 +431,7 @@ elif page=="📦 Demand Segments":
         filtered[["Sales","Growth_Rate","Sales_Volatility","Average_Order_Value"]]
         .describe()
         .round(2),
-        use_container_width=True
+        width="stretch"
     )
 
     st.subheader("📦 Cluster Members")
@@ -453,7 +446,7 @@ elif page=="📦 Demand Segments":
                 "Average_Order_Value"
             ]
         ].round(2),
-        use_container_width=True
+        width="stretch"
     )
 
     top=filtered.loc[filtered["Sales"].idxmax()]
@@ -477,7 +470,7 @@ elif page=="📦 Demand Segments":
     fig.update_traces(texttemplate="%{text:.0f}",textposition="outside")
     fig.update_layout(template="plotly_dark",height=450,showlegend=False)
 
-    st.plotly_chart(fig,use_container_width=True)
+    st.plotly_chart(fig,width="stretch")
 
     strategy={
         "High Value, Rapid Growth":"Increase inventory and prioritize replenishment.",
