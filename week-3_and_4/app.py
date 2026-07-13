@@ -407,7 +407,7 @@ elif page=="📦 Demand Segments":
     )
 
     fig.update_layout(template="plotly_dark",height=550,title_x=0.30)
-    st.plotly_chart(fig,width="stretch"
+    st.plotly_chart(fig,width="stretch")
 
     cluster_count=segment["Cluster_Name"].value_counts().reset_index()
     cluster_count.columns=["Cluster","Products"]
