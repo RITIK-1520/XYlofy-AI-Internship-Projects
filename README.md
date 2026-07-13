@@ -43,6 +43,9 @@ Built a machine learning system to predict employee attrition and identify the m
 ### 📌 Week 3 & 4 — Sales Forecasting & Demand Intelligence System
 Developed an end-to-end retail analytics dashboard combining forecasting, anomaly detection and demand segmentation.
 
+LIVE LINK : https://sales-forecast-dashboard4525.streamlit.app/
+
+
 **Highlights**
 - Time Series Forecasting
 - SARIMA
