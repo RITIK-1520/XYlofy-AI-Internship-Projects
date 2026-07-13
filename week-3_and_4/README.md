@@ -111,19 +111,10 @@ week-3_and_4/
 
 **Streamlit App**
 
-> Add your Streamlit deployment link here
-
-Example:
-
-https://your-app-name.streamlit.app
+https://sales-forecast-dashboard4525.streamlit.app/
 
 ---
 
-## 📷 Dashboard Preview
-
-Add screenshots of the dashboard here after deployment.
-
----
 
 ## 👨‍💻 Author
 
