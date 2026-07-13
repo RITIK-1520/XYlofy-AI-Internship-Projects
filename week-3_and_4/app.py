@@ -39,9 +39,10 @@ with st.spinner("Loading Dashboard..."):
     sales = load_data()
     
     try:
-    sales = load_data()
+        sales = load_data() 
 except Exception as e:
-    st.error(f"Error loading data: {e}")
+
+st.error(f"Error loading data: {e}")
     st.stop()
 
 st.sidebar.title("Welcome to the Dashboard")
