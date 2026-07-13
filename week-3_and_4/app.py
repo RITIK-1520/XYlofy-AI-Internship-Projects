@@ -138,7 +138,7 @@ if page=="🏠 Home":
 
     st.subheader("Filtered Sales Data")
 
-    st.dataframe(filtered_sales,width="stretch")
+    st.dataframe(filtered_sales,use_container_width=True)
     top_category = (
         sales.groupby("Category")["Sales"]
         .sum()
@@ -225,7 +225,7 @@ elif page == "📈 Forecast Explorer":
 
     st.dataframe(
         forecast_data.style.format({"Forecast":"{:,.2f}"}),
-        width="stretch"
+        use_container_width=True
     )
 
     # Forecast Summary
@@ -277,7 +277,7 @@ elif page == "📈 Forecast Explorer":
 
     st.dataframe(
         comparison.sort_values("MAPE").head(1).round(2),
-        width="stretch"
+        use_container_width=True
     )
 
     # Business Insight
@@ -340,7 +340,7 @@ elif page=="🚨 Anomaly Report":
         anomaly[["Order Date","Sales"]]
         .style.format({"Sales":"{:,.2f}"})
         .highlight_max(subset=["Sales"], color="#ff6961"),
-       width="stretch"
+       use_container_width=True
     )
 
     highest = anomaly.loc[anomaly["Sales"].idxmax()]
@@ -431,7 +431,7 @@ elif page=="📦 Demand Segments":
         filtered[["Sales","Growth_Rate","Sales_Volatility","Average_Order_Value"]]
         .describe()
         .round(2),
-        width="stretch"
+        use_container_width=True
     )
 
     st.subheader("📦 Cluster Members")
@@ -446,7 +446,7 @@ elif page=="📦 Demand Segments":
                 "Average_Order_Value"
             ]
         ].round(2),
-        width="stretch"
+        use_container_width=True
     )
 
     top=filtered.loc[filtered["Sales"].idxmax()]
